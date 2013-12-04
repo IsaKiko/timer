@@ -13,7 +13,7 @@ l<!doctype html>
       function maintainTimer(t0) {
         var t1 = Date.now()/1000;
         document.getElementById("timer").innerHTML=Math.floor(t1-t0);
-        setTimeout(function(){maintainTimer(t0)},100);
+        setTimeout(function(){maintainTimer(t0)},10);
       }
       maintainTimer(t0);
     });
