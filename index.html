@@ -1,0 +1,20 @@
+<!doctype html>
+<head>
+  <title>Timer</title>
+</head>
+<body>
+  <div>
+    <h1 id="timer"></h1>
+  </div>
+  <script>
+    function updateTimer(t) {
+      document.getElementById("timer").innerHTML=t;
+      t = setTimeout(function(){updateTimer(t+1)},1000);
+    }
+    function runTimer() {
+      updateTimer(0);
+    }
+    runTimer();
+  </script>
+</body>
+</html>
