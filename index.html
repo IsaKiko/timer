@@ -1,6 +1,7 @@
 <!doctype html>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/> <!--320-->
-<head>
+<head><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/> <!--320-->
+
   <title>Timer</title>
   <script src="http://codeorigin.jquery.com/jquery-1.10.2.min.js"></script>
 </head>
@@ -15,6 +16,7 @@
         var t1 = Date.now()/1000;
         document.getElementById("timer").innerHTML="hello world! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus id velit lorem. Nunc ornare in lacus egestas semper. Morbi placerat ultrices consectetur. Quisque faucibus nulla ornare felis venenatis, in sodales magna tempor. Mauris ornare nisi risus, sit amet venenatis justo molestie sed. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque et semper nisl, ut eleifend purus. Nulla id feugiat est. Quisque sed purus nisi. Nunc in enim non sem iaculis fermentum.";
         setTimeout(function(){maintainTimer(t0)},10);
+	setTimeout(function(){$("#timer").hide()},10000); //10000 = 10 seconds
       }
       maintainTimer(t0);
     });
