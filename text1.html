@@ -1,0 +1,41 @@
+<!doctype html>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/> <!--320-->
+
+  <title>Timer</title>
+  <script src="http://codeorigin.jquery.com/jquery-1.10.2.min.js"></script>
+</head>
+<body style="background-color:black">
+
+  <div>
+    <h1 id="timer" style="white-space: nowrap; padding: 100px; color: white;  background-color: black; font-size: 130pt; text-align: left;  margin: auto 10px; user-scalable=0"></h1>
+  </div>
+
+  <div>
+<a href="JavaScript:go()"><img src="circle.gif"; id="image"></a>
+  </div>
+
+
+  <script>
+	// instantly hide the text
+	$("#timer").hide();
+
+    	
+      	function maintainTimer() {
+		document.getElementById("timer").innerHTML="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus id velit lorem. Nunc ornare in lacus egestas semper. Morbi placerat ultrices consectetur. Quisque faucibus nulla ornare felis venenatis, in sodales magna tempor. Mauris ornare nisi risus, sit amet venenatis justo molestie sed. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque et semper nisl, ut eleifend purus. Nulla id feugiat est. Quisque sed purus nisi. Nunc in enim non sem iaculis fermentum.";
+//			setTimeout(function(){maintainTimer(t0)},100);
+		setTimeout(function(){$("#timer").hide()},10000); //10000 = 10 seconds
+		setTimeout(function(){$("#image").show()},13000);
+      	}
+
+	function go(){	
+		setTimeout(function(){$("#timer").show()},1000);
+		$("#image").hide();
+		maintainTimer();
+	}
+  </script>
+
+
+</body>
+</html>
+
+
