@@ -13,12 +13,7 @@
 	<a href="JavaScript:go()"><img src="circle.gif"; id="image"></a>
 	<a href="JavaScript:goback()"><img src="circleback.gif"; id="imageback"></a>
   </div>
-
-<script src = "nonbounce.js"></script>
-
   <script>
-	nonbounce("content");
-
 	// instantly hide the text
 	$("#text").hide();
 	$("#imageback").hide();
@@ -38,7 +33,6 @@
 	function goback(){	
 		window.open("index.html","_self");
 	}
-
 
   </script>
 
