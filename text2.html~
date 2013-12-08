@@ -2,6 +2,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/> <!--320-->
 
 <title>Timer</title>
+<script src="http://codeorigin.jquery.com/jquery-1.10.2.min.js"></script>
 </head>
 
 <body style="background-color:black">
@@ -12,17 +13,14 @@
 	<a href="JavaScript:go()"><img src="circle.gif"; id="image"></a>
 	<a href="JavaScript:goback()"><img src="circleback.gif"; id="imageback"></a>
   </div>
-
   <script>
-	nonbounce("text");
-
 	// instantly hide the text
 	$("#text").hide();
 	$("#imageback").hide();
 
     	
       	function maintainTimer() {
-		document.getElementById("text").innerHTML="In a small town a greengrocer had opened a shop that was located above a deep cellar. Every night, mice came in droves out of this cellar into the shop. They ate apples and pears, grapes and nuts and did not spare the vegetables and potatoes either. No goods that were in the shop were safe from the small intrusive rodents between midnight and sunrise. As long as there was noise in the streets at night and cats were driving by, the mice still stayed quietly in the cellar. But as soon as the old clock on the town hall had struck midnight and it became quiet in the street, they came out in droves, enjoyed the sweet fruits and celebrated real feasts, whose remains filled the owner with despair every morning when he entered the shop. So he tried to protect himself against the mice. At first he set up traps all over the shop.";
+		document.getElementById("text").innerHTML="No quiero agua, quiero vino!";
 		setTimeout(function(){$("#text").hide()},5000); //10000 = 10 seconds
 		setTimeout(function(){$("#imageback").show()},6000);
       	}
@@ -35,7 +33,6 @@
 	function goback(){	
 		window.open("index.html","_self");
 	}
-
 
   </script>
 
