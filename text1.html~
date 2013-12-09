@@ -2,6 +2,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/> <!--320-->
 
 <title>Timer</title>
+<script src="http://codeorigin.jquery.com/jquery-1.10.2.min.js"></script>
 </head>
 
 <body style="background-color:black">
@@ -14,7 +15,6 @@
   </div>
 
   <script>
-	nonbounce("text");
 
 	// instantly hide the text
 	$("#text").hide();
