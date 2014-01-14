@@ -13,14 +13,16 @@
 	<a href="JavaScript:go()"><img src="circle.gif"; id="image"></a>
 	<a href="JavaScript:goback()"><img src="circleback.gif"; id="imageback"></a>
   </div>
+
   <script>
+
 	// instantly hide the text
 	$("#text").hide();
 	$("#imageback").hide();
 
     	
       	function maintainTimer() {
-		document.getElementById("text").innerHTML="El elefante bebe agua.";
+		document.getElementById("text").innerHTML="Trees grow almost everywhere except in permanent ice and snow, on the tops of high mountains and in deserts. If an empty piece of land is left to itself for long enough, after some time trees will start to grow. At first, the ground is covered with low plants. Later, bushes grow and in their shade, some of the lower plants that had established themselves first, then die. When still more time has passed, trees start to grow. As they grow bigger, some of the bushes are caught in the shade of the bigger trees and die. In this way, a forest develops over time. Most trees grow slowly, and a number of them can become very old. When old trees die, young ones appear that take their place. Forests are a habitat that can exist for a very long time without changing. It depends on the climate which trees can be found in a certain area.";
 		setTimeout(function(){$("#text").hide()},5000); //10000 = 10 seconds
 		setTimeout(function(){$("#imageback").show()},6000);
       	}
@@ -33,6 +35,7 @@
 	function goback(){	
 		window.open("index.html","_self");
 	}
+
 
   </script>
 
