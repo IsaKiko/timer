@@ -1,0 +1,44 @@
+<!doctype html>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/> <!--320-->
+
+<title>Timer</title>
+<script src="http://codeorigin.jquery.com/jquery-1.10.2.min.js"></script>
+</head>
+
+<body style="background-color:black">
+  <div>
+        <h1 ; id="text" style="white-space: nowrap; padding: 100px; color: white;  background-color: black; font-size: 130pt; text-align: left;  margin: auto 10px; user-scalable=0; font-family:arial; font-variant: small-caps" >CSS font-family</h1>
+  </div>
+  <div>
+        <a href="JavaScript:go()"><img src="circle.gif"; id="image"></a>
+        <a href="JavaScript:goback()"><img src="circleback.gif"; id="imageback"></a>
+  </div>
+
+  <script>
+
+        // instantly hide the text
+        $("#text").hide();
+        $("#imageback").hide();
+
+            
+              function maintainTimer() {
+                document.getElementById("text").innerHTML="This story begins with Once Upon A Time, because the best stories do, of course. So, Once Upon A Time, and imagine if you can, a steep sided valley cluttered with giant, spiky green pine trees and thick, green grass that reaches to the top of your socks so that when you run, you have to bring your knees up high, like running through water. Wildflowers spread their sweet heady perfume along the gentle breezes and bees hum musically to themselves as they cheerily collect flower pollen. People are very happy here and they work hard, keeping their houses spick and span and their children's faces clean. This particular summer had been very hot and dry, making the lean farm dogs sleepy and still. Farmers whistled lazily to themselves and would stand and stare into the distance, trying to remember what it was that they were supposed to be doing. By two o'clock in the afternoon, the town would be in a haze of slumber, with grandmas nodding off over their knitting and farmers snoozing in the haystacks. It was very, very hot. No matter how hot the day, however, the children would always play in the gentle, rolling meadows. With wide brimmed hats and skin slippery with sun block, they chittered and chattered like sparrows, as they frolicked in their favourite spot. Now, their favourite spot is very important to this story because in this particular spot is a large, long, scaly rock that looks amazingly similar to a sleeping dragon. The children knew it was a dragon. The grown-ups knew it was a dragon. The dogs and cats and birds knew it was a dragon. But nobody was scared because it never, ever moved. The boys and girls would clamber all over it, poking sticks at it and hanging wet gumboots on its ears but it didn't mind in the least. The men folk would sometimes chop firewood on its zigzagged tail because it was just the right height and the Ladies Weaving Group often spun sheep fleece on its spikes.  Often on a cool night, when the stars were twinkling brightly in a velvet sky and the children peacefully asleep, the grown-ups would settle for the evening with a mug of steaming cocoa in a soft cushioned armchair. Then the stories about How The Dragon Got There began. Nobody knew for sure, there were many different versions depending on which family told the tale, but one thing that everybody agreed on, was this: In Times of Trouble The Dragon will Wake And Free the Village By making a Lake.";
+                setTimeout(function(){$("#text").hide()},30000); //10000 = 10 seconds
+                setTimeout(function(){$("#imageback").show()},31000);
+              }
+
+        function go(){        
+                setTimeout(function(){$("#text").show()},500);
+                $("#image").hide();
+                maintainTimer();
+        }
+        function goback(){        
+                window.open("index.html","_self");
+        }
+
+
+  </script>
+
+
+</body>
+</html>
