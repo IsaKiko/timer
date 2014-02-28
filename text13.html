@@ -1,0 +1,44 @@
+<!doctype html>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/> <!--320-->
+
+<title>Timer</title>
+<script src="http://codeorigin.jquery.com/jquery-1.10.2.min.js"></script>
+</head>
+
+<body style="background-color:black">
+  <div>
+	<h1 ; id="text" style="white-space: nowrap; padding: 100px; color: white;  background-color: black; font-size: 130pt; text-align: left;  margin: auto 10px; user-scalable=0; font-family:arial; font-variant: small-caps" >CSS font-family</h1>
+  </div>
+  <div>
+	<a href="JavaScript:go()"><img src="circle.gif"; id="image"></a>
+	<a href="JavaScript:goback()"><img src="circleback.gif"; id="imageback"></a>
+  </div>
+
+  <script>
+
+	// instantly hide the text
+	$("#text").hide();
+	$("#imageback").hide();
+
+    	
+      	function maintainTimer() {
+		document.getElementById("text").innerHTML="Once, a little mouse who lived in the country invited a little Mouse from the city to visit him.  When the little City Mouse sat down to dinner he was surprised to find that the Country Mouse had nothing to eat except barley and grain. 'Really,' he said, 'you do not live well at all; you should see how I live!  I have all sorts of fine things to eat every day.  You must come to visit me and see how nice it is to live in the city.' The little Country Mouse was glad to do this, and after a while he went to the city to visit his friend. The very first place that the City Mouse took the Country Mouse to see was the kitchen cupboard of the house where he lived.  There, on the lowest shelf, behind some stone jars, stood a big paper bag of brown sugar.  The little City Mouse gnawed a hole in the bag and invited his friend to nibble for himself.";
+		setTimeout(function(){$("#text").hide()},60000); //10000 = 10 seconds
+		setTimeout(function(){$("#imageback").show()},61000);
+      	}
+
+	function go(){	
+		setTimeout(function(){$("#text").show()},500);
+		$("#image").hide();
+		maintainTimer();
+	}
+	function goback(){	
+		window.open("index.html","_self");
+	}
+
+
+  </script>
+
+
+</body>
+</html>
