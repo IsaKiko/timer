@@ -1,0 +1,44 @@
+<!doctype html>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/> <!--320-->
+
+<title>Timer</title>
+<script src="http://codeorigin.jquery.com/jquery-1.10.2.min.js"></script>
+</head>
+
+<body style="background-color:black">
+  <div>
+	<h1 ; id="text" style="white-space: nowrap; padding: 100px; color: white;  background-color: black; font-size: 130pt; text-align: left;  margin: auto 10px; user-scalable=0; font-family:arial; font-variant: small-caps" >CSS font-family</h1>
+  </div>
+  <div>
+	<a href="JavaScript:go()"><img src="circle.gif"; id="image"></a>
+	<a href="JavaScript:goback()"><img src="circleback.gif"; id="imageback"></a>
+  </div>
+
+  <script>
+
+	// instantly hide the text
+	$("#text").hide();
+	$("#imageback").hide();
+
+    	
+      	function maintainTimer() {
+		document.getElementById("text").innerHTML="A shoemaker, by no fault of his own, became so poor that at last he had nothing left but enough leather for one pair of shoes. So in the evening, he cut the leather into the shape of the shoes, and he left his work on the table to finish in the morning. He lay down quietly in his bed, and before he fell asleep he asked God to help him. In the morning, just as he was about to sit down to work, he saw the two shoes standing quite finished on his table. He was astounded, and did not know what to make of it. He took the shoes in his hands to look at them more closely and he saw that they were so neatly made that there was not one bad stitch in them. It was just as if they were intended as a masterpiece. Soon after, a customer came in to the shop, and as the shoes pleased him so well, he paid more than the usual price.";
+		setTimeout(function(){$("#text").hide()},60000); //10000 = 10 seconds
+		setTimeout(function(){$("#imageback").show()},61000);
+      	}
+
+	function go(){	
+		setTimeout(function(){$("#text").show()},500);
+		$("#image").hide();
+		maintainTimer();
+	}
+	function goback(){	
+		window.open("index.html","_self");
+	}
+
+
+  </script>
+
+
+</body>
+</html>
