@@ -1,0 +1,44 @@
+<!doctype html>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/> <!--320-->
+
+<title>Timer</title>
+<script src="http://codeorigin.jquery.com/jquery-1.10.2.min.js"></script>
+</head>
+
+<body style="background-color:black">
+  <div>
+	<h1 ; id="text" style="white-space: nowrap; padding: 100px; color: white;  background-color: black; font-size: 130pt; text-align: left;  margin: auto 10px; user-scalable=0; font-family:arial; font-variant: small-caps" >CSS font-family</h1>
+  </div>
+  <div>
+	<a href="JavaScript:go()"><img src="circle.gif"; id="image"></a>
+	<a href="JavaScript:goback()"><img src="circleback.gif"; id="imageback"></a>
+  </div>
+
+  <script>
+
+	// instantly hide the text
+	$("#text").hide();
+	$("#imageback").hide();
+
+    	
+      	function maintainTimer() {
+		document.getElementById("text").innerHTML="High above the city, on a tall column, stood the statue of the Happy Prince. He was gilded all over with thin leaves of fine gold, for eyes he had two bright sapphires, and a large red ruby glowed on his sword-hilt. He was very much admired indeed. 'He is as beautiful as a weathercock,' remarked one of the Town Councillors who wished to gain a reputation for having artistic taste; 'only not quite so useful,' he added, fearing lest people should think him unpractical, which he really was not. 'Why can't you be like the Happy Prince?' asked a sensible mother of her little boy who was crying for the moon. 'The Happy Prince never dreams of crying for anything.' 'I am glad there is someone in the world who is quite happy', muttered a disappointed man as he gazed at the wonderful statue. 'He looks just like an angel,' said the Charity Children as they came out of the cathedral in their bright scarlet cloaks, and their clean white pinafores. 'How do you know?' said the Mathematical Master, 'you have never seen one.'";
+		setTimeout(function(){$("#text").hide()},60000); //10000 = 10 seconds
+		setTimeout(function(){$("#imageback").show()},61000);
+      	}
+
+	function go(){	
+		setTimeout(function(){$("#text").show()},500);
+		$("#image").hide();
+		maintainTimer();
+	}
+	function goback(){	
+		window.open("index.html","_self");
+	}
+
+
+  </script>
+
+
+</body>
+</html>
