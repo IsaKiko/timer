@@ -1,0 +1,44 @@
+<!doctype html>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/> <!--320-->
+
+<title>Timer</title>
+<script src="http://codeorigin.jquery.com/jquery-1.10.2.min.js"></script>
+</head>
+
+<body style="background-color:black">
+  <div>
+	<h1 ; id="text" style="white-space: nowrap; padding: 100px; color: white;  background-color: black; font-size: 130pt; text-align: left;  margin: auto 10px; user-scalable=0; font-family:arial; font-variant: small-caps" >CSS font-family</h1>
+  </div>
+  <div>
+	<a href="JavaScript:go()"><img src="circle.gif"; id="image"></a>
+	<a href="JavaScript:goback()"><img src="circleback.gif"; id="imageback"></a>
+  </div>
+
+  <script>
+
+	// instantly hide the text
+	$("#text").hide();
+	$("#imageback").hide();
+
+    	
+      	function maintainTimer() {
+		document.getElementById("text").innerHTML="Marmalade is a baked bean cat. I bet you've never met a baked bean cat before. If you have, it was probably Marmalade, because as far as I know, he's the only one in the whole wide World. As you can probably guess, a baked bean cat is a very fussy cat. All baked bean cats ever eat is baked beans. Baked beans for breakfast, baked beans for lunch, baked beans for supper and baked beans for brunch - in fact, I don't think that Marmalade the baked bean cat has even tasted anything else except for baked beans - ever! Sometimes, when Marmalade is feeling peckish and wants a snack, he will sit by the sunny window, reading his newspaper. And, as well as all this, Marmalade is probably the laziest cat in the World too. He's so lazy that sometimes, he won't even get out of bed!";
+		setTimeout(function(){$("#text").hide()},60000); //10000 = 10 seconds
+		setTimeout(function(){$("#imageback").show()},61000);
+      	}
+
+	function go(){	
+		setTimeout(function(){$("#text").show()},500);
+		$("#image").hide();
+		maintainTimer();
+	}
+	function goback(){	
+		window.open("index.html","_self");
+	}
+
+
+  </script>
+
+
+</body>
+</html>
